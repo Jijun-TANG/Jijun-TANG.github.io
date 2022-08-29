@@ -8514,6 +8514,7 @@ h1, h2, h3, h4, h5,
   margin: 2px auto 0;
   display: block;
   width: 30px;
+  z-index: 2;
   background: transparent;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -8724,6 +8725,18 @@ h1, h2, h3, h4, h5,
     font-size: 30px;
     margin-bottom: 30px;
     color: #3e64ff; }
+  .page .subHeadingCert {
+      font-weight: 700;
+      font-size: 22px;
+      color: #0000CD; }
+
+.div_top_hypers {
+        display:inline;      
+}
+
+.ul_top_hypers li{
+        display: inline;
+}
 
 .resume-wrap {
   width: 100%;
@@ -8753,7 +8766,7 @@ h1, h2, h3, h4, h5,
     font-weight: 700; }
   .resume-wrap .position {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: #000000; }
 
 .ftco-partner {
