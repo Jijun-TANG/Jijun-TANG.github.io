@@ -468,8 +468,18 @@ pre {
 
 
 .row-skill1-languages{
-  display: flex;
+  display: grid;
   column-gap: 2px;
+  max-height: 170px;
+}
+
+/* Resize images */
+.row-skill1-languages img {
+  max-height: 170px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .row-skill2-bigdata{

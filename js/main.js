@@ -181,18 +181,28 @@
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
+			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+			console.log(comma_separator_number_step);
+			
+			// Get all number elements
+			var $numbers = $('.number');
+			
+			var animationDuration = 5000;
+			// Loop through each counter
+			for (var i = 0; i < parseInt($numbers.data('number')); i++) {
+				var $this = $($numbers[i]);
+				var num = $this.data('number');
+				
+				animationDuration = Math.max(1000, animationDuration - (i * 400));
+
+				console.log(num);
+				$this.animateNumber(
+				  {
+				    number: num,
+				    numberStep: comma_separator_number_step
+				  }, animationDuration
+				);
+			}
 				
 			}
 
