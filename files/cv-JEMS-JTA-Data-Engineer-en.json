@@ -1,0 +1,2039 @@
+{
+    "options": {
+        "published": false,
+        "referencing": true,
+        "culture": "en_US",
+        "description": ""
+    },
+    "title": {
+        "value": "Data Engineer"
+    },
+    "download": {
+        "$views": [],
+        "printCvId": "default"
+    },
+    "professionalPosition": {
+        "availability": "JOB_S",
+        "professionalStatus": "DEMAND"
+    },
+    "languageSkills": {
+        "elements": [
+            {
+                "id": 2900768,
+                "culture": "fr",
+                "level": 100,
+                "details": "C1",
+                "sort": 0
+            },
+            {
+                "id": 2900769,
+                "culture": "en",
+                "level": 100,
+                "details": "C1",
+                "sort": 1
+            },
+            {
+                "id": 2900770,
+                "culture": "zh",
+                "level": 100,
+                "details": "Native",
+                "sort": 2
+            },
+            {
+                "id": 2900771,
+                "culture": "he",
+                "level": 20,
+                "details": "Basic",
+                "sort": 3
+            },
+            {
+                "id": 2900772,
+                "culture": "it",
+                "level": 40,
+                "details": "Advanced",
+                "sort": 4
+            },
+            {
+                "id": 2983810,
+                "culture": "de",
+                "level": 30,
+                "details": "Basic",
+                "sort": 5
+            }
+        ]
+    },
+    "tags": [
+        {
+            "id": 4152127,
+            "title": "Quality software development and speed",
+            "pos": 0
+        },
+        {
+            "id": 4152128,
+            "title": "Team communications",
+            "pos": 1
+        },
+        {
+            "id": 4152129,
+            "title": "Proactive and rigorous work",
+            "pos": 2
+        }
+    ],
+    "contacts": {
+        "elements": [],
+        "form": false
+    },
+    "positions": {
+        "1": [
+            "certificates",
+            "skills",
+            "experiences",
+            "educations",
+            "languageSkills",
+            "events"
+        ]
+    },
+    "passwordProtected": false,
+    "protected": false,
+    "referenced": true,
+    "published": false,
+    "uploaded": false,
+    "language": "en",
+    "availability": {},
+    "mainCvGroup": true,
+    "id": 4728029,
+    "url": "",
+    "main": true,
+    "culture": "en_US",
+    "description": "",
+    "updatedAt": "2026-04-30T10:48:39+02:00",
+    "createdAt": "2026-04-07T09:51:17+02:00",
+    "color": "302E2C",
+    "completion": 1,
+    "hidden": true,
+    "renderingMode": "print",
+    "owner": {
+        "isPremium": false,
+        "confirmed": true,
+        "offer": {
+            "id": 100,
+            "nbPortfolios": -1,
+            "accessToLimitedDesigns": true,
+            "haveCustomColors": false,
+            "canUploadCv": false,
+            "hasMessageEventsAccess": false,
+            "canAccessProofreading": false,
+            "haveMultiCv": true
+        },
+        "url": "https:\/\/www.doyoubuzz.com\/jijun-tang-cv\/",
+        "apps": [
+            {
+                "id": 846,
+                "name": "JEMS"
+            }
+        ],
+        "id": 3551939,
+        "db": "showcase_471",
+        "login": "jtang@jems-group.com",
+        "slug": "jijun-tang-cv",
+        "registeredAt": "2026-04-07T09:51:17+02:00",
+        "objective": "undeclared",
+        "gender": 0,
+        "firstname": "Jijun",
+        "lastname": "TANG",
+        "metadatas": [
+            {
+                "id": 296547,
+                "key": "manager:none",
+                "createdAt": "2024-12-10T13:57:45+01:00"
+            },
+            {
+                "id": 296577,
+                "key": "kind:user",
+                "createdAt": "2024-12-16T10:28:36+01:00"
+            },
+            {
+                "id": 297015,
+                "key": "availability:1",
+                "createdAt": "2025-01-28T13:18:43+01:00"
+            },
+            {
+                "id": 297986,
+                "key": "tag:30597",
+                "createdAt": "2025-05-06T09:25:02+02:00"
+            }
+        ],
+        "origin": "personns"
+    },
+    "userInformation": {
+        "$views": [],
+        "file": "\/var\/users\/_\/2026\/4\/7\/9\/3551939\/avatar\/4728029\/avatar_cp_630.jpg",
+        "birthdate": {
+            "day": 4,
+            "month": 12,
+            "year": "1994"
+        },
+        "birthday": "1994-12-04T00:00:00+01:00",
+        "hasAvatar": false,
+        "avatars": {
+            "tiny": "https:\/\/www.doyoubuzz.com\/var\/users\/_\/2026\/4\/7\/9\/3551939\/avatar\/4728029\/avatar_tn.jpg",
+            "normal": "https:\/\/www.doyoubuzz.com\/var\/users\/_\/2026\/4\/7\/9\/3551939\/avatar\/4728029\/avatar_cp.jpg",
+            "big": "https:\/\/www.doyoubuzz.com\/var\/users\/_\/2026\/4\/7\/9\/3551939\/avatar\/4728029\/avatar_cp_big.jpg",
+            "cp_630": "https:\/\/www.doyoubuzz.com\/var\/users\/_\/2026\/4\/7\/9\/3551939\/avatar\/4728029\/avatar_cp_630.jpg"
+        },
+        "city": "Paris",
+        "region": "",
+        "haveDrivingLicence": true
+    },
+    "presentation": {
+        "$views": [],
+        "text": "**Big Data Engineer with 5 years of experience**, specialized in the design, development, optimization and **maintenance** of data pipelines (**NiFi, Kafka, Spark, Elasticsearch, Airflow**, etc). I support business teams in data valorization while ensuring the reliability and scalability of processing. I also have solid experience in **backend API development (FastAPI, Java, Spring) and Cloud deployment (GCP, AWS) with DevOps practices (Kubernetes, GitLab CI, Jenkins)**.",
+        "home": true
+    },
+    "experiences": [
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "08",
+                    "year": "2025"
+                },
+                "end": {
+                    "month": "02",
+                    "year": "2026"
+                }
+            },
+            "id": 20516124,
+            "company": "Ellishpere",
+            "city": "Tours",
+            "contractType": "CDI",
+            "countryId": 72,
+            "start": "2025-08-01T10:48:39+02:00",
+            "end": "2026-02-01T10:48:39+01:00",
+            "logo": "\/var\/f\/re\/y-\/rey-jSiQ6fUoBGy2acWYgwnCk9N8p7I50JVqH14TLZhXAbO_tn.jpeg",
+            "logos": {
+                "master": "\/var\/f\/re\/y-\/rey-6pTNxQLoiFAS_cJ1ekmO29fD8jg4IywBtEns0Ca_master.jpeg",
+                "tn": "\/var\/f\/re\/y-\/rey-jSiQ6fUoBGy2acWYgwnCk9N8p7I50JVqH14TLZhXAbO_tn.jpeg",
+                "mid": "\/var\/f\/re\/y-\/rey-m_OpeWXfSFIgcHQ92ns7BLKwrYZ63y-TN4VoqGJ5zx_mid.jpeg",
+                "big": "\/var\/f\/re\/y-\/rey-HWk_jz-hIfLAp08KMcUVmt5u3oa1EFYy94GOQxDnlP_big.jpeg"
+            },
+            "link": "https:\/\/www.ellisphere.com\/",
+            "home": true,
+            "sort": 0,
+            "title": "Big Data Engineer",
+            "slug": "ellishpere",
+            "description": "Marketing & Sales: Identify the right prospects, acquire new reliable customers and develop your portfolio sustainably;\nRisk Management: Master risks in your business relationships;\nCompliance: Comply with legal obligations",
+            "missions": [
+                {
+                    "toDel": false,
+                    "id": 107701374,
+                    "sort": 0,
+                    "description": "- Design and development of **Natural Language Processing (NLP)** features in **Java and Scala**.\n- Implementation of a pipeline validating daily **XML** files via **JAXB** using **XSD** schemas\n- Deployment and maintenance of 4 batch ETL chains in **REXX**.\n- Creation of an **Angular 20** UI for business data visualization.\n- Administration of **Kafka** topics and streams for data streaming.\n- Implementation of observability (SLO/monitoring) via **Prometheus and Grafana** dashboards.\n- Management of **CI/CD pipelines (GLPI, Jenkins, SVN)** including documentation writing, unit tests and code reviews.",
+                    "type": "mission"
+                }
+            ],
+            "results": [
+                {
+                    "toDel": false,
+                    "id": 108578885,
+                    "sort": 0,
+                    "description": "Production deployment of 2 critical processing chains.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 108683940,
+                    "sort": 1,
+                    "description": "Processing of thousands of financial records.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 108683941,
+                    "sort": 2,
+                    "description": "Resolution of more than 30 incidents.",
+                    "type": "result"
+                }
+            ],
+            "objectives": [],
+            "contexts": [
+                {
+                    "toDel": false,
+                    "id": 107701375,
+                    "sort": 0,
+                    "description": "Integrated into a team of 9 people working in Agile (developers, product managers), I work on designing new features and maintaining 4 strategic ETL chains. These pipelines process judicial and financial data of European companies, the business challenge being to guarantee 100% reliability of data for about ten documents per day.",
+                    "type": "context"
+                }
+            ],
+            "environments": [
+                {
+                    "toDel": false,
+                    "id": 107701376,
+                    "sort": 0,
+                    "description": "Java",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701377,
+                    "sort": 1,
+                    "description": "Kafka",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701378,
+                    "sort": 2,
+                    "description": "Jenkins",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701379,
+                    "sort": 3,
+                    "description": "SVN",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701380,
+                    "sort": 4,
+                    "description": "Grafana",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701381,
+                    "sort": 5,
+                    "description": "Prometheus",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701382,
+                    "sort": 6,
+                    "description": "XML",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701383,
+                    "sort": 7,
+                    "description": "XSD",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701384,
+                    "sort": 8,
+                    "description": "SCALA",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701385,
+                    "sort": 9,
+                    "description": "Spark",
+                    "type": "environment"
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "10",
+                    "year": "2024"
+                },
+                "end": {
+                    "month": "02",
+                    "year": "2025"
+                }
+            },
+            "id": 20516125,
+            "company": "Orange",
+            "city": "Mougins",
+            "contractType": "CDI",
+            "countryId": 72,
+            "start": "2024-10-01T10:46:53+02:00",
+            "end": "2025-02-01T10:46:53+01:00",
+            "logo": "\/var\/f\/re\/y-\/rey-PW0C2cqzDbrNiV9-TMAfE3sLxmgHty8hKQw6FvUB1JI_tn.png",
+            "logos": {
+                "master": "\/var\/f\/re\/y-\/rey-Kamf21isgN6V7pYRnJuZ0FXlb49TOqyEHh_c-vr_master.png",
+                "tn": "\/var\/f\/re\/y-\/rey-PW0C2cqzDbrNiV9-TMAfE3sLxmgHty8hKQw6FvUB1JI_tn.png",
+                "mid": "\/var\/f\/re\/y-\/rey-WEvMY4s-DoIO1Ft0L9m7kVuc2nfBRyj6C3PzalXS_g_mid.png",
+                "big": "\/var\/f\/re\/y-\/rey-hvYZSNEWpoGgCAFcRH4PlbfB7Xi9t6xa20DeVzIQJT_big.png"
+            },
+            "link": "https:\/\/www.orange.fr\/portail",
+            "home": true,
+            "sort": 1,
+            "title": "Big Data Engineer",
+            "slug": "orange",
+            "description": "French telecommunications",
+            "missions": [
+                {
+                    "toDel": false,
+                    "id": 107701386,
+                    "sort": 0,
+                    "description": "- Design and development of new features for ETL chains based on **Kafka**, **Spark** and **ElasticSearch**.",
+                    "type": "mission"
+                },
+                {
+                    "toDel": false,
+                    "id": 108705434,
+                    "sort": 1,
+                    "description": "- Development and implementation of a **RAG (Retrieval-Augmented Generation)** solution for an **internal LLM (Dinootoo)**.",
+                    "type": "mission"
+                },
+                {
+                    "toDel": false,
+                    "id": 108706041,
+                    "sort": 2,
+                    "description": "- Operational maintenance of **Big Data applications (Kafka, Spark, NiFi, ElasticSearch, Airflow)**.",
+                    "type": "mission"
+                },
+                {
+                    "toDel": false,
+                    "id": 108706042,
+                    "sort": 3,
+                    "description": "- Testing applications from on-premise to GCP environments (Cloud Composer, **BigQuery**, **Big Table**)",
+                    "type": "mission"
+                },
+                {
+                    "toDel": false,
+                    "id": 108706043,
+                    "sort": 4,
+                    "description": "- Update and optimization of **GCP DataFlow** packages in Python.",
+                    "type": "mission"
+                },
+                {
+                    "toDel": false,
+                    "id": 108706044,
+                    "sort": 5,
+                    "description": "- Industrialization via **CI/CD integration (GitLab CI, Jenkins, GCP)**.",
+                    "type": "mission"
+                },
+                {
+                    "toDel": false,
+                    "id": 108706045,
+                    "sort": 6,
+                    "description": "- Participation in **Agile (Scrum)** rituals via **JIRA/Confluence**",
+                    "type": "mission"
+                }
+            ],
+            "results": [
+                {
+                    "toDel": false,
+                    "id": 107701387,
+                    "sort": 0,
+                    "description": "Improvement and generalization of 2 pipeline features, correcting 50% of transformation errors.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701388,
+                    "sort": 1,
+                    "description": "Successful update of all Python packages for **GCP Dataflow**, ensuring job security and performance.",
+                    "type": "result"
+                }
+            ],
+            "objectives": [],
+            "contexts": [
+                {
+                    "toDel": false,
+                    "id": 107701389,
+                    "sort": 0,
+                    "description": "Orange, French telecommunications leader, undertook the migration of its data to **GCP Cloud**. Within a team of 15 people, I accompanied this transition by optimizing ETL pipelines. The business challenge was to ensure continuity of Big Data applications while controlling Google Cloud costs.",
+                    "type": "context"
+                }
+            ],
+            "environments": [
+                {
+                    "toDel": false,
+                    "id": 107701390,
+                    "sort": 0,
+                    "description": "**Python**, Scala, **Java**, GitLab, GCP, Jira Confluence, **Kafka**, ElasticSearch, **Bash**, AirFlow, DataFlow, Jenkins",
+                    "type": "environment"
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "03",
+                    "year": "2023"
+                },
+                "end": {
+                    "month": "08",
+                    "year": "2024"
+                }
+            },
+            "id": 20516126,
+            "company": "La Française des jeux",
+            "city": "Vitrolles",
+            "contractType": "CDI",
+            "countryId": 72,
+            "start": "2023-03-01T16:46:38+01:00",
+            "end": "2024-08-01T16:46:38+02:00",
+            "logo": "\/var\/f\/re\/y-\/rey-uLHTKf6WgnBXDikQPr_zjC3yhxYo04qJ-2mEFletO5V_tn.jpeg",
+            "logos": {
+                "master": "\/var\/f\/re\/y-\/rey-CsFvu7el8HPONDAobnU4Y0ayjBVtZw1WJz5k-q9_master.jpeg",
+                "tn": "\/var\/f\/re\/y-\/rey-uLHTKf6WgnBXDikQPr_zjC3yhxYo04qJ-2mEFletO5V_tn.jpeg",
+                "mid": "\/var\/f\/re\/y-\/rey-1fQhOYJyvs0DwE7_aN34S6HjpeCc9GL52Mtk8FnurR_mid.jpeg",
+                "big": "\/var\/f\/re\/y-\/rey-7Cu_BbKPtYqaf6esyv2h1UTiAcj8DI-mwLxrZSXMn0_big.jpeg"
+            },
+            "home": true,
+            "sort": 2,
+            "title": "Production Big Data Engineer",
+            "slug": "la-francaise-des-jeux",
+            "missions": [
+                {
+                    "toDel": false,
+                    "id": 107701391,
+                    "sort": 0,
+                    "description": "++**Achievements:**++\n\n* **Operational maintenance** of Big Data infrastructure (**Apache Hadoop HDFS, Kafka, Spark, NiFi, ElasticSearch, Airflow, GitLab**).\n* Data Quality control via automated Python scripts.\n* Design, implementation and **maintenance** of ETL pipelines (creation and optimization of **NiFi** flowfiles)\n* Development and deployment of APIs (**FastAPI**) for documentation data exposure.\n* Security certificates management (**Kafka/ElasticSearch/NiFi**).\n* Continuous integration and deployment (**GitLab CI, Kubernetes, Docker, Nexus**).\n* **Agile Scrum rituals** and technical documentation writing.\n\n++**Challenge:**++\n\nThe objective was to calculate the valid retention period and make visually exploitable the volume of unconsumed data on Kafka, within a distributed cluster.\n\n++**Resolution:**++\n\nIn collaboration with the Tech Lead, I implemented Kafka metrics export to **Prometheus** and designed custom **Grafana** dashboards, thus offering immediate visibility to engineers.",
+                    "type": "mission"
+                }
+            ],
+            "results": [
+                {
+                    "toDel": false,
+                    "id": 108580330,
+                    "sort": 0,
+                    "description": "Design and development of 2 internal tooling applications in Angular.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 108580331,
+                    "sort": 1,
+                    "description": "End-to-end deployment of an ETL chain processing approximately 50 GB per day.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 108580332,
+                    "sort": 2,
+                    "description": "Resolution of more than 50 production incidents, maintaining 99% uptime.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 108580333,
+                    "sort": 3,
+                    "description": "Creation of a centralized Big Data component access portal, increasing team productivity.",
+                    "type": "result"
+                },
+                {
+                    "toDel": false,
+                    "id": 108580334,
+                    "sort": 4,
+                    "description": "Refactoring and update of a critical Scala application.",
+                    "type": "result"
+                }
+            ],
+            "objectives": [],
+            "contexts": [
+                {
+                    "toDel": false,
+                    "id": 107701392,
+                    "sort": 0,
+                    "description": "Within the FDJ **Data Lake Production** team, I am responsible for the reliability and availability of critical data. My role is to ensure ETL pipeline maintenance, API development and monitoring dashboard creation. The business challenge is to guarantee accuracy in data availability while ensuring compliance.",
+                    "type": "context"
+                }
+            ],
+            "environments": [
+                {
+                    "toDel": false,
+                    "id": 107701393,
+                    "sort": 0,
+                    "description": "**Python**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701394,
+                    "sort": 1,
+                    "description": "**Scala**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701395,
+                    "sort": 2,
+                    "description": "**Linux**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701396,
+                    "sort": 3,
+                    "description": "**Kafka**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701397,
+                    "sort": 4,
+                    "description": "**Spark**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701398,
+                    "sort": 5,
+                    "description": "**Gitlab**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701399,
+                    "sort": 6,
+                    "description": "**Kubernetes**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701400,
+                    "sort": 7,
+                    "description": "**Airflow**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701401,
+                    "sort": 8,
+                    "description": "**Docker**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701402,
+                    "sort": 9,
+                    "description": "**ElasticSearch**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701403,
+                    "sort": 10,
+                    "description": "**Angular**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701404,
+                    "sort": 11,
+                    "description": "**Nifi**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701405,
+                    "sort": 12,
+                    "description": "**Bash**",
+                    "type": "environment"
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "10",
+                    "year": "2022"
+                },
+                "end": {
+                    "month": "02",
+                    "year": "2023"
+                }
+            },
+            "id": 20516127,
+            "company": "Consort Groupe",
+            "city": "Paris",
+            "contractType": "CDI",
+            "countryId": 72,
+            "start": "2022-10-01T10:46:29+02:00",
+            "end": "2023-02-01T10:46:29+01:00",
+            "logo": "\/var\/f\/re\/y-\/rey-N06GZT7utb12ECB4W9alU5eP-8mRycDxJYjoAsqIQgr_tn.png",
+            "logos": {
+                "master": "\/var\/f\/re\/y-\/rey-KrnBT8hSH1IOo3Luwet0lMEcyxZkVf_apX4FjJY_master.png",
+                "tn": "\/var\/f\/re\/y-\/rey-N06GZT7utb12ECB4W9alU5eP-8mRycDxJYjoAsqIQgr_tn.png",
+                "mid": "\/var\/f\/re\/y-\/rey-CxDA9ORsU_aqjnz86c0E7uHe3FivgtmSJphIW4wNrb_mid.png",
+                "big": "\/var\/f\/re\/y-\/rey-Bgq4Vc20Zz15C9ArKJDi-SFsX3nTwf78LlYIhujN_k_big.png"
+            },
+            "link": "https:\/\/consort-group.com\/",
+            "home": true,
+            "sort": 3,
+            "title": "Python Developer",
+            "slug": "consort-groupe",
+            "missions": [
+                {
+                    "toDel": false,
+                    "id": 107701406,
+                    "sort": 0,
+                    "description": "* End-to-end Data Science project management.\n* Design of mathematical algorithms for identification and generation of bounding boxes covering essential texts.\n* Development, model accuracy evaluation and application testing.\n* Deployment of the packaged model on Microsoft Azure cloud.",
+                    "type": "mission"
+                }
+            ],
+            "results": [
+                {
+                    "toDel": false,
+                    "id": 108579550,
+                    "sort": 0,
+                    "description": "* Production deployment of an organizational chart image recognition application on Azure Functions.\n* Model accuracy reaching 95% with processing latency under 200 ms per document.",
+                    "type": "result"
+                }
+            ],
+            "objectives": [],
+            "contexts": [
+                {
+                    "toDel": false,
+                    "id": 107701410,
+                    "sort": 0,
+                    "description": "Development of an OCR (Computer Vision) algorithm to extract and structure texts present in organizational chart images. The business challenge was to automate the entry of these documents to save 90% of manual processing time.",
+                    "type": "context"
+                }
+            ],
+            "environments": [
+                {
+                    "toDel": false,
+                    "id": 107701411,
+                    "sort": 0,
+                    "description": "Python",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701412,
+                    "sort": 1,
+                    "description": "Keras",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701413,
+                    "sort": 2,
+                    "description": "JavaScript",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701414,
+                    "sort": 3,
+                    "description": "Azure",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108579551,
+                    "sort": 4,
+                    "description": "PaddlePaddle",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108709676,
+                    "sort": 5,
+                    "description": "Jupyter Notebook",
+                    "type": "environment"
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "05",
+                    "year": "2022"
+                },
+                "end": {
+                    "month": "09",
+                    "year": "2022"
+                }
+            },
+            "id": 20516128,
+            "company": "Factset",
+            "city": "Paris",
+            "contractType": "CDI",
+            "countryId": 72,
+            "start": "2022-05-01T10:45:49+02:00",
+            "end": "2022-09-01T10:45:49+02:00",
+            "logo": "\/var\/f\/re\/y-\/rey-NAykqCaGmcltKxbh7WePo_6TzI-sjEwVFU0Ri5JY13Q_tn.png",
+            "logos": {
+                "master": "\/var\/f\/re\/y-\/rey-Ma2-8vlEXmbKW7ZBreC1HSOLgQ_VJhNzcUf9p6y_master.png",
+                "tn": "\/var\/f\/re\/y-\/rey-NAykqCaGmcltKxbh7WePo_6TzI-sjEwVFU0Ri5JY13Q_tn.png",
+                "mid": "\/var\/f\/re\/y-\/rey-43NpZXLzsfkIwYercoumV0-KEA71ag9FSGjWH6RDtJ_mid.png",
+                "big": "\/var\/f\/re\/y-\/rey-g3pbSJcr8NhMq4wnA26sQWVevx_T5DEmKjYZ1yX0HC_big.png"
+            },
+            "link": "https:\/\/www.factset.com\/",
+            "home": true,
+            "sort": 4,
+            "title": "Full Stack Python Vue.js Developer",
+            "slug": "factset",
+            "description": "FactSet, global provider of integrated financial information",
+            "missions": [
+                {
+                    "toDel": false,
+                    "id": 107701415,
+                    "sort": 0,
+                    "description": "* Design, development, documentation and maintenance of 3 critical APIs in **Python/FastAPI**.\n* Fullstack participation (component enrichment via **Vue.js**).\n* Implementation of continuous integration via **GitHub** and deployment on **AWS**.\n* Writing unit tests (**PyTest**) and creation of **Mocks** via Swagger.\n* Daily collaboration with international project teams.",
+                    "type": "mission"
+                }
+            ],
+            "results": [
+                {
+                    "toDel": false,
+                    "id": 108710702,
+                    "sort": 0,
+                    "description": "* Delivery of 3 secured APIs processing up to 10,000 requests per day.\n* Test coverage maintained above 90%.",
+                    "type": "result"
+                }
+            ],
+            "objectives": [],
+            "contexts": [
+                {
+                    "toDel": false,
+                    "id": 107701416,
+                    "sort": 0,
+                    "description": "Integrated into the 'Deep Sector' project providing enriched financial data on TMT sectors (Technologies, Media, Telecommunications). Within an Agile team of 20 people (developers, Scrum Master, PO), my role was to improve data access for clients with high availability and low latency constraints.",
+                    "type": "context"
+                }
+            ],
+            "environments": [
+                {
+                    "toDel": false,
+                    "id": 107701417,
+                    "sort": 0,
+                    "description": "**Python**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701418,
+                    "sort": 1,
+                    "description": "Javascript",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701419,
+                    "sort": 2,
+                    "description": "Linux",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701420,
+                    "sort": 3,
+                    "description": "Pytest",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701421,
+                    "sort": 4,
+                    "description": "**FastAPI**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 107701422,
+                    "sort": 5,
+                    "description": "**unittest**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108710703,
+                    "sort": 6,
+                    "description": "**AWS**",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108710704,
+                    "sort": 7,
+                    "description": "Vue.js",
+                    "type": "environment"
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "04",
+                    "year": "2021"
+                },
+                "end": {
+                    "month": "11",
+                    "year": "2021"
+                }
+            },
+            "id": 20756569,
+            "company": "Axens",
+            "city": "Rueil-Malmaison",
+            "contractType": "STAGE",
+            "countryId": 72,
+            "start": "2021-04-01T10:45:20+02:00",
+            "end": "2021-11-01T10:45:20+01:00",
+            "logo": "\/var\/f\/re\/y-\/rey-wGhV7CsaHYEWzNLArt1Mu3xXb4-6yOf5jvo0RUiFc29_tn.jpeg",
+            "logos": {
+                "master": "\/var\/f\/re\/y-\/rey-oHRL5hg36VWOE0fJsA9mqytZDSYv2b1CiBXGu4M_master.jpeg",
+                "tn": "\/var\/f\/re\/y-\/rey-wGhV7CsaHYEWzNLArt1Mu3xXb4-6yOf5jvo0RUiFc29_tn.jpeg",
+                "mid": "\/var\/f\/re\/y-\/rey-Y4-ugfI8UEqtKQWjXhP1pVGbezyLTw9Filmo_ONS5c_mid.jpeg",
+                "big": "\/var\/f\/re\/y-\/rey-iR9UqzZhYISBCNH6-KM7XOmg8pxvt_oT3rsaneVJ41_big.jpeg"
+            },
+            "link": "https:\/\/www.axens.net\/",
+            "home": true,
+            "sort": 5,
+            "title": "Axens",
+            "slug": "axens",
+            "description": "Axens Group provides a complete range of solutions for the conversion of oil and biomass to cleaner fuels, the production and purification of major petrochemical intermediates, the chemical recycling of plastics, all natural gas treatment and conversion options, water treatment as well as carbon capture & storage solutions.",
+            "missions": [
+                {
+                    "toDel": false,
+                    "id": 108711627,
+                    "sort": 0,
+                    "description": "* End-to-end Data Science project management.\n* Design of Artificial Intelligence algorithms for time series prediction.\n* Development, model accuracy evaluation and application testing in Microsoft Azure environment.\n* Deployment of an automated prediction job (via **Bash** and **cron**) running weekly.",
+                    "type": "mission"
+                }
+            ],
+            "results": [
+                {
+                    "toDel": false,
+                    "id": 108711628,
+                    "sort": 0,
+                    "description": "* Production deployment of a predictive algorithm on Azure environment.\n* Implementation of reliable alerts based on physico-chemical indicators.\n* Technical failure prediction accuracy on the process reached 99.99%",
+                    "type": "result"
+                }
+            ],
+            "objectives": [],
+            "contexts": [
+                {
+                    "toDel": false,
+                    "id": 108711629,
+                    "sort": 0,
+                    "description": "Development of a time series prediction algorithm to extract key indicators and trigger alerts on an oil production process. The business challenge was to understand physico-chemical processes and propose predictions with very high accuracy.",
+                    "type": "context"
+                }
+            ],
+            "environments": [
+                {
+                    "toDel": false,
+                    "id": 108711630,
+                    "sort": 0,
+                    "description": "Python",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108711631,
+                    "sort": 1,
+                    "description": "Jupyter Notebook",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108711632,
+                    "sort": 2,
+                    "description": "Azure Machine Learning",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108711633,
+                    "sort": 3,
+                    "description": "Scikit Learn",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108711634,
+                    "sort": 4,
+                    "description": "Keras",
+                    "type": "environment"
+                },
+                {
+                    "toDel": false,
+                    "id": 108711635,
+                    "sort": 5,
+                    "description": "Tensorflow",
+                    "type": "environment"
+                }
+            ]
+        }
+    ],
+    "educations": [
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "month": "09",
+                    "year": "2019"
+                },
+                "end": {
+                    "month": "12",
+                    "year": "2021"
+                }
+            },
+            "id": 11481890,
+            "schoolName": "Sorbonne Université",
+            "home": true,
+            "sort": 0,
+            "diploma": "Engineering and Mathematics for Business",
+            "slug": "ingenierie-et-mathematiques-pour-l-entreprise-sorbonne-universite-2019",
+            "description": "Demanding curriculum in applied mathematics foundations such as functional analysis, advanced probabilities and statistics, implementing cutting-edge industry algorithms on computer, realizing deep learning and artificial intelligence projects",
+            "details": [
+                {
+                    "id": 3131785,
+                    "description": "Python"
+                },
+                {
+                    "id": 3131784,
+                    "description": "CUDA"
+                },
+                {
+                    "id": 3131782,
+                    "description": "Time Series"
+                },
+                {
+                    "id": 3131783,
+                    "description": "Partial Differential Equation"
+                },
+                {
+                    "id": 3131781,
+                    "description": "Monte Carlo"
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "range": {
+                "start": {
+                    "year": "2016"
+                },
+                "end": {
+                    "year": "2019"
+                }
+            },
+            "id": 11481891,
+            "schoolName": "Sorbonne Université",
+            "home": true,
+            "sort": 1,
+            "diploma": "Mathematics and Computer Science",
+            "slug": "mathematiques-et-informatiques-sorbonne-universite-2016",
+            "description": "Curriculum mastering both mathematical knowledge and computer science practices",
+            "details": []
+        }
+    ],
+    "portfolios": [],
+    "skills": [
+        {
+            "$views": [],
+            "id": 67288329,
+            "home": true,
+            "sort": 0,
+            "description": "Python",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288330,
+                    "home": true,
+                    "sort": 0,
+                    "description": "FastAPI",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288331,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Django",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288332,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Pandas",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288333,
+                    "home": true,
+                    "sort": 3,
+                    "description": "Flask",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288334,
+                    "home": true,
+                    "sort": 4,
+                    "description": "Numpy",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288335,
+                    "home": true,
+                    "sort": 5,
+                    "description": "keras",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288336,
+                    "home": true,
+                    "sort": 6,
+                    "description": "scikit-learn",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288337,
+                    "home": true,
+                    "sort": 7,
+                    "description": "tensorflow",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288338,
+                    "home": true,
+                    "sort": 8,
+                    "description": "SQLModel",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288339,
+                    "home": true,
+                    "sort": 9,
+                    "description": "unittest",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288340,
+                    "home": true,
+                    "sort": 10,
+                    "description": "PyTest",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288341,
+                    "home": true,
+                    "sort": 11,
+                    "description": "BeautifulSoup",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288342,
+                    "home": true,
+                    "sort": 12,
+                    "description": "Matplotlib",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288343,
+                    "home": true,
+                    "sort": 13,
+                    "description": "Seaborn",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288344,
+                    "home": true,
+                    "sort": 14,
+                    "description": "Swagger",
+                    "level": 80,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288346,
+            "home": true,
+            "sort": 0,
+            "description": "JAVA",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288347,
+                    "home": true,
+                    "sort": 0,
+                    "description": "JAXb",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288348,
+                    "home": true,
+                    "sort": 1,
+                    "description": "XSD",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288349,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Hibernate",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288350,
+                    "home": true,
+                    "sort": 3,
+                    "description": "Javax.xml",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288351,
+                    "home": true,
+                    "sort": 4,
+                    "description": "JUnit",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288352,
+                    "home": true,
+                    "sort": 5,
+                    "description": "Maven",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288353,
+                    "home": true,
+                    "sort": 6,
+                    "description": "StAX",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68138926,
+                    "home": true,
+                    "sort": 7,
+                    "description": "Jackson",
+                    "level": 80,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288354,
+            "home": true,
+            "sort": 0,
+            "description": "Front",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288355,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Angular",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288356,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Node JS",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288357,
+                    "home": true,
+                    "sort": 2,
+                    "description": "React.js",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288358,
+                    "home": true,
+                    "sort": 3,
+                    "description": "TypeScript",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139665,
+                    "home": true,
+                    "sort": 4,
+                    "description": "NextJS",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139666,
+                    "home": true,
+                    "sort": 5,
+                    "description": "NestJS",
+                    "level": 70,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288359,
+            "home": true,
+            "sort": 0,
+            "description": "Databases",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288360,
+                    "home": true,
+                    "sort": 0,
+                    "description": "PostgreSQL",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288361,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Oracle",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288362,
+                    "home": true,
+                    "sort": 2,
+                    "description": "MySQL",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288363,
+                    "home": true,
+                    "sort": 3,
+                    "description": "DBeaver",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288364,
+                    "home": true,
+                    "sort": 4,
+                    "description": "MongoDB",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288365,
+                    "home": true,
+                    "sort": 5,
+                    "description": "Amazon DynamoDB",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288366,
+                    "home": true,
+                    "sort": 6,
+                    "description": "SQL Server",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68138962,
+                    "home": true,
+                    "sort": 7,
+                    "description": "Supabase",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68138963,
+                    "home": true,
+                    "sort": 8,
+                    "description": "SQLite",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68138964,
+                    "home": true,
+                    "sort": 9,
+                    "description": "ElasticSearch",
+                    "level": 80,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288367,
+            "home": true,
+            "sort": 0,
+            "description": "Tools",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288368,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Postman",
+                    "level": 70,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288369,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Excel",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288370,
+                    "home": true,
+                    "sort": 2,
+                    "description": "GLPI",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288371,
+                    "home": true,
+                    "sort": 3,
+                    "description": "ServiceNow",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288372,
+                    "home": true,
+                    "sort": 4,
+                    "description": "Manade",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139708,
+                    "home": true,
+                    "sort": 5,
+                    "description": "JIRA",
+                    "level": 70,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139709,
+                    "home": true,
+                    "sort": 6,
+                    "description": "Claude Code",
+                    "level": 80,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288373,
+            "home": true,
+            "sort": 0,
+            "description": "DevOps",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288374,
+                    "home": true,
+                    "sort": 0,
+                    "description": "GitLab",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288375,
+                    "home": true,
+                    "sort": 1,
+                    "description": "GitHub",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288376,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Jenkins",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288377,
+                    "home": true,
+                    "sort": 3,
+                    "description": "SVM",
+                    "level": 70,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288378,
+            "home": true,
+            "sort": 0,
+            "description": "Containers",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288379,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Docker",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288380,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Kubernetes",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288381,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Ansible",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288382,
+                    "home": true,
+                    "sort": 3,
+                    "description": "Rancher",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288383,
+                    "home": true,
+                    "sort": 4,
+                    "description": "Helm",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288384,
+                    "home": true,
+                    "sort": 5,
+                    "description": "Render",
+                    "level": 90,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288385,
+            "home": true,
+            "sort": 0,
+            "description": "Observability",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288386,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Grafana",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288387,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Prometheus",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288388,
+                    "home": true,
+                    "sort": 2,
+                    "description": "FluentD",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288389,
+                    "home": true,
+                    "sort": 3,
+                    "description": "OpenTelemetry",
+                    "level": 60,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288390,
+            "home": true,
+            "sort": 0,
+            "description": "Infrastructure & Storage",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288393,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Google Cloud Platform",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288395,
+                    "home": true,
+                    "sort": 1,
+                    "description": "AWS",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288394,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Azure",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288391,
+                    "home": true,
+                    "sort": 3,
+                    "description": "terraform",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288392,
+                    "home": true,
+                    "sort": 4,
+                    "description": "Windows Server",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288396,
+                    "home": true,
+                    "sort": 5,
+                    "description": "Open Stack",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288397,
+                    "home": true,
+                    "sort": 6,
+                    "description": "AWS S3",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288398,
+                    "home": true,
+                    "sort": 7,
+                    "description": "Azure Blob Storage",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288399,
+                    "home": true,
+                    "sort": 8,
+                    "description": "AWS Cloudwatch",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288400,
+                    "home": true,
+                    "sort": 9,
+                    "description": "Azure Data Lake Storage",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288401,
+                    "home": true,
+                    "sort": 10,
+                    "description": "Aws Lambda",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288402,
+                    "home": true,
+                    "sort": 11,
+                    "description": "Azure Functions",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139783,
+                    "home": true,
+                    "sort": 12,
+                    "description": "Composer GCP",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139784,
+                    "home": true,
+                    "sort": 13,
+                    "description": "BigQuerry",
+                    "level": 90,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68139785,
+                    "home": true,
+                    "sort": 14,
+                    "description": "GCP Dataflow",
+                    "level": 90,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288403,
+            "home": true,
+            "sort": 0,
+            "description": "Methods",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288404,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Agile",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288405,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Sprint",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288406,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Agile Scrum",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288407,
+                    "home": true,
+                    "sort": 3,
+                    "description": "Kanban",
+                    "level": 100,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288408,
+            "home": true,
+            "sort": 0,
+            "description": "LLM/AI Tools",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288409,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Cursor",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288410,
+                    "home": true,
+                    "sort": 1,
+                    "description": "MCP",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288411,
+                    "home": true,
+                    "sort": 2,
+                    "description": "ClaudeAI",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288412,
+                    "home": true,
+                    "sort": 3,
+                    "description": "ChatGPT",
+                    "level": 80,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "$views": [],
+            "id": 67288413,
+            "home": true,
+            "sort": 0,
+            "description": "Data Orchestration",
+            "children": [
+                {
+                    "$views": [],
+                    "id": 67288414,
+                    "home": true,
+                    "sort": 0,
+                    "description": "Airflow",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288415,
+                    "home": true,
+                    "sort": 1,
+                    "description": "Nifi",
+                    "level": 100,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288416,
+                    "home": true,
+                    "sort": 2,
+                    "description": "Rexx",
+                    "level": 80,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 67288417,
+                    "home": true,
+                    "sort": 3,
+                    "description": "ControlM",
+                    "level": 60,
+                    "children": []
+                },
+                {
+                    "$views": [],
+                    "id": 68238950,
+                    "home": true,
+                    "sort": 4,
+                    "description": "Bash",
+                    "level": 80,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "interests": [],
+    "events": [
+        {
+            "id": 179504,
+            "name": "Heros",
+            "role": "speaker",
+            "year": "2026",
+            "description": "https:\/\/www.made-in-asia.nl\/",
+            "sort": 0,
+            "logo": "\/var\/f\/Es\/ft\/EsftzIDx9FecXoKZ3nN8w-gr_JWL5CyGU46PV7RYkBMuAiQjl2"
+        },
+        {
+            "id": 179505,
+            "name": "CONCOURS INTERNATIONAL PRIX D'EUROPE 2024",
+            "role": "speaker",
+            "year": "15-Jul-2024",
+            "description": "https:\/\/www.melun.fr\/agenda\/1465-concours-international-prix-d-europe-2024",
+            "sort": 0,
+            "logo": "\/var\/f\/53\/Uz\/53Uz4GT07I6fFkcA8plCm9DVYy-e_Z2vtWoLSXaxERKwBQHb1i"
+        },
+        {
+            "id": 179506,
+            "name": "Made in Asia",
+            "role": "speaker",
+            "year": "28-Fev-2026",
+            "description": "https:\/\/www.madeinasia.be\/en\/",
+            "sort": 0,
+            "logo": "\/var\/f\/1q\/pA\/1qpAwuHUS_JGeO0367Tia89cnrgkZRFNQCBzsXmDl-bWIh4PfK"
+        },
+        {
+            "id": 179507,
+            "name": "Japan Touch Lyon",
+            "role": "speaker",
+            "year": "17-Mai-2025",
+            "sort": 0,
+            "logo": "\/var\/f\/HE\/sO\/HEsOb84ow3VTxS7XMzCnyA2YqmivRU9PW-ruQ5JeBkF1c_flhI"
+        },
+        {
+            "id": 179508,
+            "name": "Japan Expo",
+            "role": "facilitator",
+            "year": "2025",
+            "sort": 0,
+            "logo": "\/var\/f\/oT\/FU\/oTFUbfwhaCeRJuv9m8Q-VNjzingpX3B0kY_Mx6OcIZ7ly1WqPE"
+        },
+        {
+            "id": 179509,
+            "name": "Geek Days",
+            "role": "speaker",
+            "year": "2024",
+            "sort": 0,
+            "logo": "\/var\/f\/k9\/IE\/k9IEA4JLcVHoWjf-Yz1pM30bNBZU8wQh2uO7_SPiGe6mnrFtls"
+        },
+        {
+            "id": 179510,
+            "name": "JEC World leading international composite show",
+            "role": "volunteer",
+            "year": "2023",
+            "description": "https:\/\/www.jec-world.events\/fr\/",
+            "sort": 1,
+            "logo": "\/var\/f\/wp\/RB\/wpRB9eoPLiXK21lVGuCm0q8sJ_kY5FaNEztf7SAMg3nZhjWUIr"
+        }
+    ],
+    "certificates": [
+        {
+            "id": 1600532,
+            "name": "Certified Kubernetes Administrator (CKA)",
+            "description": "Training in progress, to obtain 01/06/2026",
+            "sort": 0,
+            "logo": "\/var\/f\/b2\/rn\/b2rnmsYOw6AWF5U_GHiychj4kqPTJpeoS3z-fQV8IuBL1vt0K9"
+        },
+        {
+            "id": 1600533,
+            "name": "AWS Certified Developer – Associate",
+            "obtainedAt": "23 Dec 2022",
+            "link": "https:\/\/www.credly.com\/badges\/e22777e2-fa94-4446-a144-1f9de17dbcfc\/linked_in_profile",
+            "sort": 0,
+            "logo": "\/var\/f\/H6\/gM\/H6gMPW289bqmnyjuCwNVXG_iZcsKLD0QkJBae3rASFphvYxzlE"
+        },
+        {
+            "id": 1600534,
+            "name": "Big Data Analysis with Scala and Spark",
+            "obtainedAt": "21 Oct 2022",
+            "link": "https:\/\/www.coursera.org\/account\/accomplishments\/certificate\/S5QRDUU5BUKB",
+            "sort": 0,
+            "logo": "\/var\/f\/gV\/Bb\/gVBbI0cz-Rk85H7ypW2rCNEDSUhP4YTsmojfFnGqMi1exKwLAl"
+        },
+        {
+            "id": 1600535,
+            "name": "Algorithms on Graphs",
+            "obtainedAt": "18 Mar 2022",
+            "link": "https:\/\/www.coursera.org\/account\/accomplishments\/certificate\/S5QRDUU5BUKB",
+            "sort": 0,
+            "logo": "\/var\/f\/qf\/b-\/qfb-DRy5xANQHLjnBJI6a9sk7iUrl0_XWomp38FzGtOvVegcKM"
+        },
+        {
+            "id": 1600536,
+            "name": "Deep Learning Specialization",
+            "obtainedAt": "1 Mar 2022",
+            "link": "https:\/\/www.coursera.org\/account\/accomplishments\/certificate\/ZT5VQQJ9LV5D",
+            "sort": 0,
+            "logo": "\/var\/f\/uI\/92\/uI92H_ECsA6JpWT0tLmSl5vXyF8M4zVDeYrco7U-GfbNZnBgOw"
+        }
+    ]
+}

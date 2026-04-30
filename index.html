@@ -4,7 +4,12 @@
     <title>Jijun TANG's portfolio website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Professional portfolio of Jijun TANG - Big Data Engineer specializing in data pipelines, backend APIs, and Cloud deployment.">
+    <meta name="author" content="Jijun TANG">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+     -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,6 +28,181 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* Project Modal Styles */
+      .project-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .project-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+      }
+
+      .project-modal-content {
+        background-color: #fff;
+        width: 90%;
+        max-width: 800px;
+        max-height: 85vh;
+        overflow-y: auto;
+        padding: 30px;
+        border-radius: 8px;
+        position: relative;
+        transform: scale(0.8);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      }
+
+      .project-modal.active .project-modal-content {
+        transform: scale(1);
+      }
+
+      .project-modal-close {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #aaa;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .project-modal-close:hover,
+      .project-modal-close:focus {
+        color: #000;
+      }
+
+      .project-modal-header {
+        border-bottom: 2px solid #f1f1f1;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
+
+      .project-modal-header h3 {
+        color: #ffbd39;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .project-modal-header .position {
+        display: block;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .project-modal-header .date {
+        display: block;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .modal-section {
+        margin-bottom: 20px;
+      }
+
+      .modal-section h4 {
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .modal-section p {
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .modal-section ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .modal-section ul li {
+        padding: 5px 0 5px 20px;
+        position: relative;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .modal-section ul li:before {
+        content: "\2022";
+        color: #ffbd39;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      .modal-section #modal-env {
+        background: #f8f9fa;
+        padding: 12px 15px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Project Image Sizing */
+      .project.img {
+        /* background-size: contain !important; */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #1a1a1a;
+      }
+
+      /* Project Grid Fade Effects */
+      .project-grid {
+        transition: all 0.5s ease;
+      }
+
+      .project-grid .project-item {
+        transition: opacity 0.4s ease, transform 0.4s ease, flex 0.4s ease;
+        cursor: pointer;
+      }
+
+      .project-grid.has-active .project-item {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+
+      .project-grid.has-active .project-item.active {
+        opacity: 1;
+        transform: scale(1.05);
+        z-index: 10;
+      }
+
+      .project-grid.has-active .project-item:hover {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -92,7 +272,7 @@
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<h1 class="big">About</h1>
 		            <h2 class="mb-4">About Me</h2>
-					<p>A moveable feast flows by and nourishes me with its sagesse...</p>
+					<p>Big Data Engineer with 5 years of experience, specialized in the design, development, optimization and maintenance of data pipelines (NiFi, Kafka, Spark, Elasticsearch, Airflow, etc). I support business teams in data valorization while ensuring the reliability and scalability of processing. I also have solid experience in backend API development (FastAPI, Java, Spring) and Cloud deployment (GCP, AWS) with DevOps practices (Kubernetes, GitLab CI, Jenkins).</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Name:</span> <span>Jijun TANG</span></li>
 		            	<!--<li class="d-flex"><span>Date of birth:</span> <span>December 4, 1994</span></li>-->
@@ -110,7 +290,7 @@
 	                <span class="number" data-number="11">5</span>
 	                <span>Profesional projects completed</span>
                 </p>
-                <p><a href="https://github.com/Jijun-TANG/Jijun-TANG.github.io/raw/master/files/CV_Jijun_Fr_20Jan2026.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                <p><a href="https://github.com/Jijun-TANG/Jijun-TANG.github.io/raw/master/files/JEMS-dc-Data-Engineer-JTA.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
               </div>
 	          </div>
 	        </div>
@@ -216,40 +396,43 @@
 						<div id="page-1" class= "page one">
 						    <h2 class="heading">Experience</h2>
 							<div class="resume-wrap d-flex ftco-animate">
+								<div class="icon d-flex align-items-center justify-content-center">
+									<span class="flaticon-ideas"></span>
+								</div>
+								<div class="text pl-3">
+									<span class="date">Aug 2025 - Feb 2026</span>
+									<h2>Big Data Engineer</h2>
+									<span class="position">Ellisphere</span>
+									<p>Integrated into a team of 9 people working in Agile (developers, product managers), I worked on designing new features and maintaining 4 strategic ETL chains processing judicial and financial data of European companies.</p>
+									<ul>
+										<li> Design and development of Natural Language Processing (NLP) features in Java and Scala</li>
+										<li> Implementation of a pipeline validating daily XML files via JAXB using XSD schemas</li>
+										<li> Deployment and maintenance of 4 batch ETL chains in REXX</li>
+										<li> Creation of an Angular 20 UI for business data visualization</li>
+										<li> Administration of Kafka topics and streams for data streaming</li>
+										<li> Implementation of observability (SLO/monitoring) via Prometheus and Grafana dashboards</li>
+										<li> Management of CI/CD pipelines (GLPI, Jenkins, SVN) including documentation, unit tests and code reviews</li>
+									</ul>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
 								<div class="icon-flexd-flex align-items-center justify-content-center">
 									<a href="https://chat.dinootoo.ai.orange/"><img src="images/orange.png" class="img-fluid" alt="Colorlib Template"></a>
 								</div>
 								<div class="text pl-3">
-									<span class="date">Oct 2024 - Maintenant</span>
-									<h2>Data Engineer</h2>
-									<span class="position">Orange</span>
-									<ul>
-										<li> Development of Big Data: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; Python</li>
-												<li>&#x2022; Scala</li>
-												<li>&#x2022; Spark</li>
-												<li>&#x2022; Ubuntu</li>
-											</ul>
-											
-										<li> Application maintenance: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; Apache kafka</li>
-												<li>&#x2022; Elastic Search</li>
-											</ul>
-										<li> DevOps: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; GitLab CI</li>
-												<li>&#x2022; Docker </li>
-												<li>&#x2022; Google Cloud Platform </li>
-											</ul>
-										<li> AI: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; Google Vertex AI</li>
-												<li>&#x2022; LLM </li>
-												<li>&#x2022; RAG </li>
-											</ul>
-									</ul>
+								<span class="date">Oct 2024 - Feb 2025</span>
+								<h2>Big Data Engineer</h2>
+								<span class="position">Orange</span>
+								<p>Orange, French telecommunications leader, undertook the migration of its data to GCP Cloud. Within a team of 15 people, I accompanied this transition by optimizing ETL pipelines.</p>
+								<ul>
+									<li> Design and development of new features for ETL chains based on Kafka, Spark and ElasticSearch</li>
+									<li> Development and implementation of a RAG (Retrieval-Augmented Generation) solution for an internal LLM (Dinootoo)</li>
+									<li> Operational maintenance of Big Data applications (Kafka, Spark, NiFi, ElasticSearch, Airflow)</li>
+									<li> Testing applications from on-premise to GCP environments (Cloud Composer, BigQuery, Big Table)</li>
+									<li> Update and optimization of GCP DataFlow packages in Python</li>
+									<li> Industrialization via CI/CD integration (GitLab CI, Jenkins, GCP)</li>
+									<li> Participation in Agile (Scrum) rituals via JIRA/Confluence</li>
+								</ul>
 								</div>
 						    </div>
 							<div class="resume-wrap d-flex ftco-animate">
@@ -257,79 +440,54 @@
 									<a href="https://www.fdj.fr/"><img src="images/fdj1.png" class="img-fluid" alt="Colorlib Template"></a>
 								</div>
 								<div class="text pl-3">
-									<span class="date">Mars 2023 - Août 2024</span>
-									<h2>Data Engineer</h2>
-									<span class="position">La Française des jeux</span>
-									<ul>
-										<li> Development of Big Data: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; Python</li>
-												<li>&#x2022; Scala</li>
-												<li>&#x2022; Spark</li>
-												<li>&#x2022; Bash</li>
-											</ul>
-											
-										<li> Application maintenance: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; Apache kafka</li>
-												<li>&#x2022; Elastic Search</li>
-											</ul>
-										<li> DevOps: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; GitLab CI</li>
-												<li>&#x2022; Docker </li>
-												<li>&#x2022; Kubernetes </li>
-											</ul>
-									</ul>
+								<span class="date">Mar 2023 - Aug 2024</span>
+								<h2>Production Big Data Engineer</h2>
+								<span class="position">La Française des jeux</span>
+								<p>Within the FDJ Data Lake Production team, I was responsible for the reliability and availability of critical data, ensuring ETL pipeline maintenance, API development and monitoring dashboard creation.</p>
+								<ul>
+									<li> Operational maintenance of Big Data infrastructure (Apache Hadoop HDFS, Kafka, Spark, NiFi, ElasticSearch, Airflow, GitLab)</li>
+									<li> Data Quality control via automated Python scripts</li>
+									<li> Design, implementation and maintenance of ETL pipelines (creation and optimization of NiFi flowfiles)</li>
+									<li> Development and deployment of APIs (FastAPI) for documentation data exposure</li>
+									<li> Security certificates management (Kafka/ElasticSearch/NiFi)</li>
+									<li> Continuous integration and deployment (GitLab CI, Kubernetes, Docker, Nexus)</li>
+									<li> Agile Scrum rituals and technical documentation writing</li>
+								</ul>
 								</div>
 						    </div>
-						    <div class="resume-wrap d-flex ftco-animate">
+							<div class="resume-wrap d-flex ftco-animate">
 								<div class="icon d-flex align-items-center justify-content-center">
 									<span class="flaticon-ideas"></span>
 								</div>
 								
 						        <div class="text pl-3">
-									<span class="date">Sep 2022 - Fév 2023</span>
-									<h2>Data Engineer</h2>
+									<span class="date">Oct 2022 - Feb 2023</span>
+									<h2>Python Developer</h2>
 									<span class="position">Consort Groupe</span>
+									<p>Development of an OCR (Computer Vision) algorithm to extract and structure texts present in organizational chart images, automating document entry to save 90% of manual processing time.</p>
 									<ul>
-										<li> Development of Big Data: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; Python</li>
-												<li>&#x2022; Apache Spark with Scala</li>
-												<li>&#x2022; Azure </li>
-										    </ul>
-											
-										<li> Cloud practionner: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; AWS Certified Developer Associate</li>
-												<li>&#x2022; Azure DevOps Engineer Expert</li>
-											</ul>
-										<li> DevOps: </li>
-											<ul class="ul_top_hypers">
-												<li>&#x2022; GitHub </li>
-												<li>&#x2022; Jenkins </li>
-												<li>&#x2022; TerraForm </li>
-											</ul>
+										<li> End-to-end Data Science project management</li>
+										<li> Design of mathematical algorithms for identification and generation of bounding boxes covering essential texts</li>
+										<li> Development, model accuracy evaluation and application testing</li>
+										<li> Deployment of the packaged model on Microsoft Azure cloud</li>
 									</ul>
 								</div>
-						    </div>	
+						    </div>
 							<div class="resume-wrap d-flex ftco-animate">
 								<div class="icon d-flex align-items-center justify-content-center">
 									<span class="flaticon-ideas"></span>
 								</div>
 								<div class="text pl-3">
-									<span class="date">Apr 2022 - August 2022</span>
-									<h2>Full Stack Developer</h2>
+									<span class="date">May 2022 - Sep 2022</span>
+									<h2>Full Stack Python Vue.js Developer</h2>
 									<span class="position">FactSet</span>
+									<p>Integrated into the 'Deep Sector' project providing enriched financial data on TMT sectors. Within an Agile team of 20 people, my role was to improve data access for clients with high availability and low latency constraints.</p>
 									<ul>
-										<li>Design and implement a data platform architecture providing access to large datasets, data ingestion pipelines and data infrastructure</li>
-										<li>Explore and evaluate new database technologies to build a scalable, cloud-oriented data platform</li>
-										<li>Make large and/or complex data more accessible, understandable, and usable by implementing advanced APIs for storage and querying/repartitioning</li>
-										<li>Create unified data models for data analysis and data exploration, as well as ad-hoc monitoring reporting tools</li>
-										<li>Interact with different teams to meet their needs (machine learning, content, other engineering teams)</li>
-										<li>Collaborate with engineering, cloud infrastructure and security teams to better understand their requirements and develop a highly scalable system</li>
-										<li>Contribute to the improvement of development processes as a member of the Agile development team.</li>
+										<li> Design, development, documentation and maintenance of 3 critical APIs in Python/FastAPI</li>
+										<li> Fullstack participation (component enrichment via Vue.js)</li>
+										<li> Implementation of continuous integration via GitHub and deployment on AWS</li>
+										<li> Writing unit tests (PyTest) and creation of Mocks via Swagger</li>
+										<li> Daily collaboration with international project teams</li>
 									</ul>
 								</div>
 							</div>
@@ -361,51 +519,31 @@
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3 div_top_hypers">
-		    					<span class="date">Sep 2019 - Dec 2021</span>
-		    					<h2>Master of Science in Mathematical Engineering</h2>
-		    					<span class="position">Sorbonne University</span>
-		    					<ul class="ul_top_hypers">
-									<li>&#x2022; Probabilities and Random models</li>
-									<li>&#x2022; Statistics and Time Series</li>
-									<li>&#x2022; Partial Differential Equations</li>
-									<li>&#x2022; Optimization with Matlab</li>
-									<li>&#x2022; Object oriented programming with C++ </li>
-									<li>&#x2022; Data Analysis with R</li>
-									<li>&#x2022; Machine Learning with Python</li>
-									<li>&#x2022; Parallel Programming in CUDA</li>
-								</ul>
-	    					</div>
-	    				</div>
+			    					<span class="date">Sep 2019 - Dec 2021</span>
+			    					<h2>Master of Science in Engineering and Mathematics for Business</h2>
+			    					<span class="position">Sorbonne University</span>
+			    					<p>Demanding curriculum in applied mathematics foundations such as functional analysis, advanced probabilities and statistics, implementing cutting-edge industry algorithms on computer, realizing deep learning and artificial intelligence projects.</p>
+			    					<ul class="ul_top_hypers">
+										<li>&#x2022; Python</li>
+										<li>&#x2022; CUDA</li>
+										<li>&#x2022; Time Series</li>
+										<li>&#x2022; Partial Differential Equations</li>
+										<li>&#x2022; Monte Carlo</li>
+									</ul>
+			    				</div>
+			    			</div>
 
-	    				<div class="resume-wrap d-flex ftco-animate">
-	    					<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3 div_top_hypers">
-		    					<span class="date">Sep 2016 - July 2019</span>
-		    					<h2>Bachelor of Mathematics and Computer Science</h2>
-		    					<span class="position">Sorbonne University</span>
-		    					<ul class="ul_top_hypers">
-									<li>&#x2022; Algebra and Galois Theory</li>
-									<li>&#x2022; Functionnal Analysis</li>
-									<li>&#x2022; Complex Analysis</li>
-									<li>&#x2022; Data Structures in C</li>
-									<li>&#x2022; Topology</li>
-									<li>&#x2022; Numeric methods and data representations</li>
-								</ul>
-		    				</div>
-	    				</div>
-
-	    				<div class="resume-wrap d-flex ftco-animate">
-	    					<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3">
-		    					<span class="date">Mar 2015 - Sep 2016</span>
-		    					<h2>University Diploma in Scientific French</h2>
-		    					<span class="position">Université Paris Cité</span>
-		    				</div>
-	    				</div>
+			    			<div class="resume-wrap d-flex ftco-animate">
+			    				<div class="icon d-flex align-items-center justify-content-center">
+						    		<span class="flaticon-ideas"></span>
+						    	</div>
+						    	<div class="text pl-3 div_top_hypers">
+				    					<span class="date">Sep 2016 - July 2019</span>
+				    					<h2>Bachelor of Mathematics and Computer Science</h2>
+				    					<span class="position">Sorbonne University</span>
+				    					<p>Curriculum mastering both mathematical knowledge and computer science practices.</p>
+				    				</div>
+			    			</div>
 					  </div>
 
 					  <div id="page-3" class= "page three">
@@ -580,7 +718,7 @@
 								</div>
 								<div class="col-md-6 animate-box">
 									<div class="progress-wrap ftco-animate">
-										<h3>C++</h3>
+										<h3>Java</h3>
 										<div class="progress">
 										 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="90"
 										  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
@@ -591,11 +729,11 @@
 								</div>
 								<div class="col-md-6 animate-box">
 									<div class="progress-wrap ftco-animate">
-										<h3>MongoDB</h3>
+										<h3>Kafka</h3>
 										<div class="progress">
-										 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="80"
-										  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-										    <span>80%</span>
+										 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="85"
+										  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+										    <span>85%</span>
 										  	</div>
 										</div>
 									</div>
@@ -613,11 +751,11 @@
 								</div>
 								<div class="col-md-6 animate-box">
 									<div class="progress-wrap ftco-animate">
-										<h3>kafka</h3>
+										<h3>Docker / Kubernetes</h3>
 										<div class="progress">
-										 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="70"
-										  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										    <span>70%</span>
+										 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="85"
+										  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+										    <span>85%</span>
 										  	</div>
 										</div>
 									</div>
@@ -628,114 +766,80 @@
 					    <h2 class="heading">Certificates</h2>
 					    
 						<div class="resume-wrap d-flex ftco-animate">
-	    					<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3">
-		    					<span class="date">2022</span>
-		    					<a href = "https://www.coursera.org/account/accomplishments/certificate/S5QRDUU5BUKB"><h2 class="subHeadingCert">Big Data Analysis with Scala and Spark</h2></a>
-								<!--https://www.coursera.org/account/accomplishments/verify/W6PNNWFGXQ4Y-->
-		    					<span class="position">École polytechnique fédérale de Lausanne</span>
-		    					<ul>
-									<li>Basic of Spark's RDDs</li>
-									<li>Reduction Operations & Distributed Key-Value Pairs</li>
-									<li>Partitioning and Shuffling</li>
-									<li>Structured data: SQL, Dataframes, and Datasets</li>
-								</ul>
-		    				</div>
-	    				</div>
-
-	    				<div class="resume-wrap d-flex ftco-animate">
-	    					<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3">
-		    					<span class="date">2022</span>
-		    					<a href = "https://www.coursera.org/account/accomplishments/verify/W6PNNWFGXQ4Y"><h2 class="subHeadingCert">Algorithms on Graphs</h2></a>
-								<!--https://www.coursera.org/account/accomplishments/verify/W6PNNWFGXQ4Y-->
-		    					<span class="position">University of California San Diego</span>
-		    					<ul>
-									<li>Decomposition of Graphs1: Undirected Graphs</li>
-									<li>Decomposition of Graphs2: Directed Acyclic Graphs, Topological Sort and Strongly Connected Components</li>
-									<li>Breadth-First Search and Shortest Path Tree</li>
-									<li>Dijkstra, Bellman-Ford</li>
-									<li>Minimum Spanning Trees, Kruskal's and Prim's algorithms</li>
-								</ul>
-		    				</div>
-	    				</div>
+			    				<div class="icon d-flex align-items-center justify-content-center">
+						    		<span class="flaticon-ideas"></span>
+						    	</div>
+						    	<div class="text pl-3">
+				    					<span class="date">In Progress</span>
+				    					<h2 class="subHeadingCert">Certified Kubernetes Administrator (CKA)</h2>
+				    					<span class="position">Linux Foundation</span>
+				    					<p>Training in progress, expected completion: June 2026</p>
+				    				</div>
+			    			</div>
 
 						<div class="resume-wrap d-flex ftco-animate">
-	    					<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3">
-		    					<span class="date">2021</span>
-		    					<a href = "https://www.coursera.org/account/accomplishments/verify/VS3PH7FRM8VT"><h2 class="subHeadingCert">Algorithmic Toolbox</h2></a>
-								<!--https://www.coursera.org/account/accomplishments/verify/LZR732VG6FSN-->
-		    					<span class="position">University of California San Diego</span>
-		    					<ul>
-									<li>Complexity notations</li>
-									<li>Greedy Algorithms</li>
-									<li>Divide-and-Conquer</li>
-									<li>Dynamic Programming</li>
-								</ul>
-		    				</div>
-	    				</div>
+			    				<div class="icon d-flex align-items-center justify-content-center">
+						    		<span class="flaticon-ideas"></span>
+						    	</div>
+						    	<div class="text pl-3">
+				    					<span class="date">Dec 2022</span>
+				    					<a href="https://www.credly.com/badges/e22777e2-fa94-4446-a144-1f9de17dbcfc/linked_in_profile"><h2 class="subHeadingCert">AWS Certified Developer – Associate</h2></a>
+				    					<span class="position">Amazon Web Services</span>
+				    				</div>
+			    			</div>
 
 						<div class="resume-wrap d-flex ftco-animate">
-	    					<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3">
-		    					<span class="date">2022</span>
-		    					<a href = "https://www.coursera.org/account/accomplishments/verify/LZR732VG6FSN"><h2 class="subHeadingCert">Algorithmic Toolbox</h2></a>
-		    					<span class="position">University of California San Diego</span>
-		    					<ul>
-									<li>Suffix Trees, Suffix Tries, Suffix arraies</li>
-									<li>Burrows-Wheeler Transform</li>
-									<li>Knuth-Morris-Pratt Algorithm</li>
-								</ul>
-		    				</div>
-	    				</div>
+			    				<div class="icon d-flex align-items-center justify-content-center">
+						    		<span class="flaticon-ideas"></span>
+						    	</div>
+						    	<div class="text pl-3">
+				    					<span class="date">Oct 2022</span>
+				    					<a href = "https://www.coursera.org/account/accomplishments/certificate/S5QRDUU5BUKB"><h2 class="subHeadingCert">Big Data Analysis with Scala and Spark</h2></a>
+				    					<span class="position">École polytechnique fédérale de Lausanne</span>
+				    					<ul>
+												<li>Basics of Spark's RDDs</li>
+												<li>Reduction Operations & Distributed Key-Value Pairs</li>
+												<li>Partitioning and Shuffling</li>
+												<li>Structured data: SQL, Dataframes, and Datasets</li>
+											</ul>
+				    				</div>
+			    			</div>
+
+			    			<div class="resume-wrap d-flex ftco-animate">
+			    				<div class="icon d-flex align-items-center justify-content-center">
+						    		<span class="flaticon-ideas"></span>
+						    	</div>
+						    	<div class="text pl-3">
+				    					<span class="date">Mar 2022</span>
+				    					<a href = "https://www.coursera.org/account/accomplishments/certificate/S5QRDUU5BUKB"><h2 class="subHeadingCert">Algorithms on Graphs</h2></a>
+				    					<span class="position">University of California San Diego</span>
+				    					<ul>
+												<li>Decomposition of Graphs: Undirected & Directed Graphs</li>
+												<li>Topological Sort and Strongly Connected Components</li>
+												<li>Breadth-First Search and Shortest Path Tree</li>
+												<li>Dijkstra, Bellman-Ford</li>
+												<li>Minimum Spanning Trees, Kruskal's and Prim's algorithms</li>
+											</ul>
+				    				</div>
+			    			</div>
 
 						<div class="resume-wrap d-flex ftco-animate">
 					    	<div class="icon d-flex align-items-center justify-content-center">
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3">
-		    					<span class="date">2022</span>
-								<a href="https://www.coursera.org/account/accomplishments/specialization/ZT5VQQJ9LV5D"><h2 class="subHeadingCert">Deep Learning</h2></a>
-								<!--https://www.coursera.org/account/accomplishments/verify/AM3HDGUHLX45 subHeadingCert-->
-		    					<span class="position">DeepLearning.AI</span>
-		    					<ul>
-									<li>Neural Networks and Deep Learning</li>
-									<li>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and OPtimization</li>
-									<li>Structuring Machine Learning Projects</li>
-									<li>Convolutional Neural Networs</li>
-									<li>Sequene Models</li>
-								</ul>
-	    					</div>
-	    				</div>
-
-	    				<div class="resume-wrap d-flex ftco-animate">
-					    	<div class="icon d-flex align-items-center justify-content-center">
-					    		<span class="flaticon-ideas"></span>
-					    	</div>
-					    	<div class="text pl-3">
-		    					<span class="date">2021</span>
-								<a href="https://www.coursera.org/account/accomplishments/certificate/AM3HDGUHLX45"><h2 class="subHeadingCert">Machine Learning</h2></a>
-								<!--https://www.coursera.org/account/accomplishments/verify/AM3HDGUHLX45 subHeadingCert-->
-		    					<span class="position">Stanford University</span>
-		    					<ul>
-									<li>Supervised Learning & Unsupervised Learning in Matlab</li>
-									<li>Gradient descent for Linear & Logistic Regression</li>
-									<li>Support Vector Machines</li>
-									<li>Decision Trees</li>
-									<li>Principal Components Analysis</li>
-									<li>Recommender systems</li>
-								</ul>
-	    					</div>
-	    				</div>
+			    					<span class="date">Mar 2022</span>
+								<a href="https://www.coursera.org/account/accomplishments/certificate/ZT5VQQJ9LV5D"><h2 class="subHeadingCert">Deep Learning Specialization</h2></a>
+				    					<span class="position">DeepLearning.AI</span>
+				    					<ul>
+												<li>Neural Networks and Deep Learning</li>
+												<li>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</li>
+												<li>Structuring Machine Learning Projects</li>
+												<li>Convolutional Neural Networks</li>
+												<li>Sequence Models</li>
+											</ul>
+			    				</div>
+			    			</div>
 					  </div>
 					</div>
 			  </div>
@@ -830,67 +934,138 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">My Projects</h2>
-            <p>It's still under construction, please be patient!</p>
+            <p>Click on a project to see details</p>
           </div>
         </div>
-    		<div class="row no-gutters">
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-1.jpg);">
+    		<div class="row no-gutters project-grid" id="project-grid">
+    			<div class="col-md-4 project-item" id="project-ellisphere"
+                     data-title="NLP Features Development"
+                     data-company="Ellisphere"
+                     data-period="Aug 2025 - Feb 2026"
+                     data-context="Integrated into a team of 9 people working in Agile (developers, product managers). These pipelines process judicial and financial data of European companies, the business challenge being to guarantee 100% reliability of data."
+                     data-missions="Design and development of Natural Language Processing (NLP) features in Java and Scala. Implementation of a pipeline validating daily XML files via JAXB using XSD schemas. Deployment and maintenance of 4 batch ETL chains in REXX. Creation of an Angular 20 UI for business data visualization. Administration of Kafka topics and streams for data streaming. Implementation of observability (SLO/monitoring) via Prometheus and Grafana dashboards. Management of CI/CD pipelines (GLPI, Jenkins, SVN) including documentation, unit tests and code reviews."
+                     data-results="Production deployment of 2 critical processing chains. Processing of thousands of financial records. Resolution of more than 30 incidents."
+                     data-env="Java, Scala, Kafka, Jenkins, SVN, Grafana, Prometheus, XML, XSD, Spark, Angular 20">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/projects/ellisphere.png);">
     					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
+    	    			<div class="text text-center p-4">
+    	    				<h3><a href="#" class="project-trigger">NLP Features Development</a></h3>
+    	    				<span>Java, Scala, XML, XSD - Ellisphere</span>
+    	    			</div>
     				</div>
-  				</div>
-  				<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-2.jpg);">
+  			</div>
+  			<div class="col-md-4 project-item" id="project-orange"
+                     data-title="RAG for Internal LLM"
+                     data-company="Orange"
+                     data-period="Oct 2024 - Feb 2025"
+                     data-context="Orange, French telecommunications leader, undertook the migration of its data to GCP Cloud. Within a team of 15 people, I accompanied this transition by optimizing ETL pipelines. The business challenge was to ensure continuity of Big Data applications while controlling Google Cloud costs."
+                     data-missions="Design and development of new features for ETL chains based on Kafka, Spark and ElasticSearch. Development and implementation of a RAG (Retrieval-Augmented Generation) solution for an internal LLM (Dinootoo). Operational maintenance of Big Data applications (Kafka, Spark, NiFi, ElasticSearch, Airflow). Testing applications from on-premise to GCP environments (Cloud Composer, BigQuery, Big Table). Update and optimization of GCP DataFlow packages in Python. Industrialization via CI/CD integration (GitLab CI, Jenkins, GCP). Participation in Agile (Scrum) rituals via JIRA/Confluence."
+                     data-results="Improvement and generalization of 2 pipeline features, correcting 50% of transformation errors. Successful update of all Python packages for GCP Dataflow, ensuring job security and performance."
+                     data-env="Python, Scala, Java, GitLab, GCP, Jira, Confluence, Kafka, ElasticSearch, Bash, AirFlow, DataFlow, Jenkins">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/projects/orange.png);">
     					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
+    	    			<div class="text text-center p-4">
+    	    				<h3><a href="#" class="project-trigger">RAG for Internal LLM</a></h3>
+    	    				<span>Python, GCP, LLM - Orange</span>
+    	    			</div>
     				</div>
-  				</div>
+  			</div>
 
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-3.jpg);">
+    			<div class="col-md-4 project-item" id="project-fdj"
+                     data-title="ETL Pipeline Monitoring"
+                     data-company="La Française des jeux"
+                     data-period="Mar 2023 - Aug 2024"
+                     data-context="Within the FDJ Data Lake Production team, I was responsible for the reliability and availability of critical data. The business challenge is to guarantee accuracy in data availability while ensuring compliance."
+                     data-missions="Operational maintenance of Big Data infrastructure (Apache Hadoop HDFS, Kafka, Spark, NiFi, ElasticSearch, Airflow, GitLab). Data Quality control via automated Python scripts. Design, implementation and maintenance of ETL pipelines (creation and optimization of NiFi flowfiles). Development and deployment of APIs (FastAPI) for documentation data exposure. Security certificates management (Kafka/ElasticSearch/NiFi). Continuous integration and deployment (GitLab CI, Kubernetes, Docker, Nexus). Agile Scrum rituals and technical documentation writing."
+                     data-results="Design and development of 2 internal tooling applications in Angular. End-to-end deployment of an ETL chain processing approximately 50 GB per day. Resolution of more than 50 production incidents, maintaining 99% uptime. Creation of a centralized Big Data component access portal, increasing team productivity. Refactoring and update of a critical Scala application."
+                     data-env="Python, Scala, Linux, Kafka, Spark, GitLab, Kubernetes, Airflow, Docker, ElasticSearch, Angular, NiFi, Bash">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/projects/infra_surv_project.png);">
     					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
+    	    			<div class="text text-center p-4">
+    	    				<h3><a href="#" class="project-trigger">ETL Pipeline Monitoring</a></h3>
+    	    				<span>Kafka, Prometheus, Grafana - FDJ</span>
+    	    			</div>
     				</div>
     			</div>
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-4.jpg);">
+    			<div class="col-md-4 project-item" id="project-consort"
+                     data-title="OCR for Org Charts"
+                     data-company="Consort Groupe"
+                     data-period="Oct 2022 - Feb 2023"
+                     data-context="Development of an OCR (Computer Vision) algorithm to extract and structure texts present in organizational chart images. The business challenge was to automate the entry of these documents to save 90% of manual processing time."
+                     data-missions="End-to-end Data Science project management. Design of mathematical algorithms for identification and generation of bounding boxes covering essential texts. Development, model accuracy evaluation and application testing. Deployment of the packaged model on Microsoft Azure cloud."
+                     data-results="Production deployment of an organizational chart image recognition application on Azure Functions. Model accuracy reaching 95% with processing latency under 200 ms per document."
+                     data-env="Python, Keras, JavaScript, Azure, PaddlePaddle, Jupyter Notebook">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/projects/paddle.png);">
     					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
+    	    			<div class="text text-center p-4">
+    	    				<h3><a href="#" class="project-trigger">OCR for Org Charts</a></h3>
+    	    				<span>Python, Keras, Azure - Consort Groupe</span>
+    	    			</div>
     				</div>
     			</div>
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-5.jpg);">
+    			<div class="col-md-4 project-item" id="project-factset"
+                     data-title="Financial APIs"
+                     data-company="FactSet"
+                     data-period="May 2022 - Sep 2022"
+                     data-context="Integrated into the 'Deep Sector' project providing enriched financial data on TMT sectors (Technologies, Media, Telecommunications). Within an Agile team of 20 people, my role was to improve data access for clients with high availability and low latency constraints."
+                     data-missions="Design, development, documentation and maintenance of 3 critical APIs in Python/FastAPI. Fullstack participation (component enrichment via Vue.js). Implementation of continuous integration via GitHub and deployment on AWS. Writing unit tests (PyTest) and creation of Mocks via Swagger. Daily collaboration with international project teams."
+                     data-results="Delivery of 3 secured APIs processing up to 10,000 requests per day. Test coverage maintained above 90%."
+                     data-env="Python, JavaScript, Linux, Pytest, FastAPI, unittest, AWS, Vue.js">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/projects/backend_project.png);">
     					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
+    	    			<div class="text text-center p-4">
+    	    				<h3><a href="#" class="project-trigger">Financial APIs</a></h3>
+    	    				<span>Python, FastAPI, Vue.js, AWS - FactSet</span>
+    	    			</div>
     				</div>
     			</div>
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-6.jpg);">
+    			<div class="col-md-4 project-item" id="project-axens"
+                     data-title="Time Series Prediction"
+                     data-company="Axens"
+                     data-period="Apr 2021 - Nov 2021"
+                     data-context="Development of a time series prediction algorithm to extract key indicators and trigger alerts on an oil production process. The business challenge was to understand physico-chemical processes and propose predictions with very high accuracy."
+                     data-missions="End-to-end Data Science project management. Design of Artificial Intelligence algorithms for time series prediction. Development, model accuracy evaluation and application testing in Microsoft Azure environment. Deployment of an automated prediction job (via Bash and cron) running weekly."
+                     data-results="Production deployment of a predictive algorithm on Azure environment. Implementation of reliable alerts based on physico-chemical indicators. Technical failure prediction accuracy on the process reached 99.99%."
+                     data-env="Python, Jupyter Notebook, Azure Machine Learning, Scikit Learn, Keras, Tensorflow">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/projects/deeplearning.png);">
     					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
+    	    			<div class="text text-center p-4">
+    	    				<h3><a href="#" class="project-trigger">Time Series Prediction</a></h3>
+    	    				<span>Python, Keras, Azure ML - Axens</span>
+    	    			</div>
     				</div>
     			</div>
     		</div>
     	</div>
+        <!-- Project Detail Modal -->
+        <div id="project-modal" class="project-modal">
+            <div class="project-modal-content">
+                <span class="project-modal-close">&times;</span>
+                <div class="project-modal-header">
+                    <h3 id="modal-title"></h3>
+                    <span id="modal-company" class="position"></span>
+                    <span id="modal-period" class="date"></span>
+                </div>
+                <div class="project-modal-body">
+                    <div class="modal-section">
+                        <h4>Context</h4>
+                        <p id="modal-context"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Missions</h4>
+                        <ul id="modal-missions"></ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Results</h4>
+                        <ul id="modal-results"></ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Technical Environment</h4>
+                        <p id="modal-env"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -899,7 +1074,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 shadow">
               <div class="text">
-                <strong class="number" data-number="100">0</strong>
+                <strong class="number" data-number="10">0</strong>
                 <span>Awards</span>
               </div>
             </div>
@@ -907,7 +1082,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 shadow">
               <div class="text">
-                <strong class="number" data-number="1200">0</strong>
+                <strong class="number" data-number="120">0</strong>
                 <span>Complete Projects</span>
               </div>
             </div>
@@ -915,7 +1090,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 shadow">
               <div class="text">
-                <strong class="number" data-number="1200">0</strong>
+                <strong class="number" data-number="20000+">0</strong>
                 <span>Happy Customers</span>
               </div>
             </div>
@@ -923,8 +1098,8 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 shadow">
               <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
+                <strong class="number" data-number="500000+">0</strong>
+                <span>Lines of code ac</span>
               </div>
             </div>
           </div>
@@ -939,61 +1114,62 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Blog</h1>
             <h2 class="mb-4">My Blogs</h2>
-            <p>It's still under construction, please be patient!</p>
+            <p>Thank you for passing by and examine my little thoughts!</p>
           </div>
         </div>
         <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://bold-tip-13b.notion.site/Leetcode-Memos-cf63efc73b6c447686aa93e285713339" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="https://bold-tip-13b.notion.site/Leetcode-Memos-cf63efc73b6c447686aa93e285713339">My leetcode memos</a></h3>
-                <div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">Oct. 28, 2022</span>
-	                	<a href="#" class="mr-2">Victor TANG</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 0</a>
-	                </p>
-                </div>
-                <p>Come and check what I learned from the most challenging exercises in leetcode!</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://leetcode.com/problems/out-of-boundary-paths/discuss/2290852/bfs-solution-beats-85-in-both-time-space-python-c" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="https://leetcode.com/problems/out-of-boundary-paths/discuss/2290852/bfs-solution-beats-85-in-both-time-space-python-c">Solution for out of boundary paths</a></h3>
-                <div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">July. 16, 2022</span>
-	                	<a href="#" class="mr-2">Jijun TANG</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 0</a>
-	                </p>
-                </div>
-                <p>An innovative solution using bfs and state memorization.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">Sept. 12, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry">
+				<a href="https://medium.com/@jijun.tang.data" class="block-20" style="background-image: url('images/image_3.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://medium.com/@jijun.tang.data">Check My Medium Blog Posts</a></h3>
+				  <div class="d-flex align-items-center mb-3 meta">
+					  <p class="mb-0">
+						  <span class="mr-2">April 30, 2026</span>
+						  <a href="#" class="mr-2">Admin</a>
+						  <a href="#" class="meta-chat"><span class="icon-chat"></span>4</a>
+					  </p>
+				  </div>
+				  <p>My notes on AI, Big Data, Spirituality and Life philosophy.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://bold-tip-13b.notion.site/Leetcode-Memos-cf63efc73b6c447686aa93e285713339" class="block-20" style="background-image: url('images/image_1.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://bold-tip-13b.notion.site/Leetcode-Memos-cf63efc73b6c447686aa93e285713339">My leetcode memos</a></h3>
+					<div class="d-flex align-items-center mb-3 meta">
+						<p class="mb-0">
+							<span class="mr-2">Oct. 28, 2022</span>
+							<a href="#" class="mr-2">Victor TANG</a>
+							<a href="#" class="meta-chat"><span class="icon-chat"></span> 0</a>
+						</p>
+					</div>
+					<p>Come and check what I learned from the most challenging exercises in leetcode!</p>
+				</div>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://leetcode.com/problems/out-of-boundary-paths/discuss/2290852/bfs-solution-beats-85-in-both-time-space-python-c" class="block-20" style="background-image: url('images/blog-post/Gemini_Generated_Image_99zx4899zx4899zx.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://leetcode.com/problems/out-of-boundary-paths/discuss/2290852/bfs-solution-beats-85-in-both-time-space-python-c">Solution for out of boundary paths</a></h3>
+					<div class="d-flex align-items-center mb-3 meta">
+						<p class="mb-0">
+							<span class="mr-2">July. 16, 2022</span>
+							<a href="#" class="mr-2">Jijun TANG</a>
+							<a href="#" class="meta-chat"><span class="icon-chat"></span> 0</a>
+						</p>
+					</div>
+					<p>An innovative solution using bfs and state memorization.</p>
+				</div>
+				</div>
+			</div>
+          
         </div>
       </div>
     </section>
@@ -1005,7 +1181,7 @@
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>I'm <span>Available</span> for a contract</h2>
 						<!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>-->
-						<p class="mb-0"><a href="https://www.linkedin.com/in/jijun-tang-3a289085/" target="_blank" class="btn btn-primary py-3 px-5">Hire me!</a></p>
+						<p class="mb-0"><a href="https://www.linkedin.com/in/jijun-tang-3a289085/" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Hire me!</a></p>
 					</div>
 				</div>
 			</div>
@@ -1064,18 +1240,16 @@
           <div class="col-md-6 order-md-last d-flex">
             <form action="mailto:jijun.tang.data@gmail.com?message = $MessageText" method = "POST" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input type="text" id = "ClientName" class="form-control" placeholder="Your Name">
-              </div>
-			  <!--
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-			  -->
-              <div class="form-group">
-                <input type="text" name = "SubjectOfMessage: " class="form-control" placeholder="Subject" >
+                <input type="text" name="name" id="ClientName" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <textarea name =" " id="MessageText" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="MessageText" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -1098,7 +1272,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
-              <p>(The construction of the site is not complete.) Thanks for visiting my website.</p>
+              <p>This is the portofolio of Jijun TANG. Thank you for visiting my website!</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 				<!--<i class="fab fa-linkedin"></i>  \F472 -->
 				<li class="ftco-animate"><a href="https://www.linkedin.com/in/jijun-tang-3a289085/"><span class="icon-linkedin"></span></a></li>
@@ -1135,9 +1309,9 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
+				<li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon-long-arrow-right mr-2"></span>AI strategy, Agents Implementation Expert</a></li>
                 <li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon-long-arrow-right mr-2"></span>Web Design & Development</a></li>
-                <li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon-long-arrow-right mr-2"></span>3D Graphic Design</a></li>
-                <li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon-long-arrow-right mr-2"></span>Cloud Strategy Consulting</a></li>
+                <li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon-long-arrow-right mr-2"></span>Cloud Strategy Consulting, GCP AWS expert</a></li>
                 <li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon-long-arrow-right mr-2"></span>Data Analysis & Machine Learning</a></li>
               </ul>
             </div>
@@ -1147,9 +1321,9 @@
             	<h2 class="ftco-heading-2">Have some Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">1 avenue de lowendale, Paris, île-de-France, France</span></li>
-	                <li><a href="#"><img src="images/197.svg" alt="Discord Icon"><span class="text">&nbsp;&nbsp; victor5068</span></i></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"><span class="text"> jijun.tang.data@gmail.com</span></span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Paris, France</span></li>
+					                <li><a href="#"><img src="images/197.svg" alt="Discord Icon"><span class="text">&nbsp;&nbsp; victor5068</span></a></li>
+					                <li><a href="mailto:jijun.tang.data@gmail.com"><span class="icon icon-envelope"></span><span class="text"> jijun.tang.data@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -1159,7 +1333,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  FullstackMagician &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Jijun</a>
+  LegendaryGeek &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Jijun</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
@@ -1186,6 +1360,143 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+(function($) {
+  "use strict";
+
+  // Project Modal functionality
+  $(document).ready(function() {
+    var $modal = $('#project-modal');
+    var $grid = $('.project-grid');
+    var isAnimating = false;
+
+    // Open modal
+    $('.project-item').on('click', function(e) {
+      e.preventDefault();
+      if (isAnimating) return;
+
+      var $item = $(this);
+      var title = $item.data('title');
+      var company = $item.data('company');
+      var period = $item.data('period');
+      var context = $item.data('context');
+      var missions = $item.data('missions');
+      var results = $item.data('results');
+      var env = $item.data('env');
+
+      // Populate modal
+      $('#modal-title').text(title);
+      $('#modal-company').text(company);
+      $('#modal-period').text(period);
+      $('#modal-context').text(context);
+      $('#modal-env').text(env);
+
+      // Parse missions by splitting on periods that end a sentence
+      var missionList = $('#modal-missions');
+      missionList.empty();
+      if (missions) {
+        var missionItems = missions.split('. ');
+        missionItems.forEach(function(item) {
+          item = item.trim();
+          if (item) {
+            // Remove trailing period
+            if (item.charAt(item.length - 1) === '.') {
+              item = item.slice(0, -1);
+            }
+            missionList.append('<li>' + item + '</li>');
+          }
+        });
+      }
+
+      // Parse results
+      var resultList = $('#modal-results');
+      resultList.empty();
+      if (results) {
+        var resultItems = results.split('. ');
+        resultItems.forEach(function(item) {
+          item = item.trim();
+          if (item) {
+            if (item.charAt(item.length - 1) === '.') {
+              item = item.slice(0, -1);
+            }
+            resultList.append('<li>' + item + '</li>');
+          }
+        });
+      }
+
+      // Show grid focus state (fade out others)
+      $grid.addClass('has-active');
+      $grid.find('.project-item').removeClass('active');
+      $item.addClass('active');
+
+      // Show modal
+      $modal.addClass('active');
+      $('body').css('overflow', 'hidden');
+
+      isAnimating = true;
+      setTimeout(function() {
+        isAnimating = false;
+      }, 500);
+    });
+
+    // Close modal
+    function closeModal() {
+      if (isAnimating) return;
+
+      $modal.removeClass('active');
+      $grid.removeClass('has-active');
+      $grid.find('.project-item').removeClass('active');
+      $('body').css('overflow', '');
+
+      isAnimating = true;
+      setTimeout(function() {
+        isAnimating = false;
+      }, 500);
+    }
+
+    // Close on X click
+    $('.project-modal-close').on('click', function(e) {
+      e.stopPropagation();
+      closeModal();
+    });
+
+    // Close on overlay click
+    $modal.on('click', function(e) {
+      if ($(e.target).is('.project-modal') || $(e.target).is('.project-modal-content')) {
+        closeModal();
+      }
+    });
+
+    // Close on Escape key
+    $(document).on('keydown', function(e) {
+      if (e.key === 'Escape' && $modal.hasClass('active')) {
+        closeModal();
+      }
+    });
+
+    // Prevent modal content clicks from closing
+    $('.project-modal-content').on('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Add hover effects to project items
+    $('.project-item').hover(
+      function() {
+        if (!$grid.hasClass('has-active')) {
+          $(this).find('.project').css('transform', 'scale(1.02)');
+        }
+      },
+      function() {
+        if (!$grid.hasClass('has-active')) {
+          $(this).find('.project').css('transform', '');
+        }
+      }
+    );
+  });
+
+})(jQuery);
+  </script>
     
   </body>
 </html>
