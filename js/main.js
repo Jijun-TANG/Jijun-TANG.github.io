@@ -3,6 +3,8 @@
  	easing: 'slide'
  });
 
+ 
+
 (function($) {
 
 	"use strict";
@@ -15,7 +17,8 @@
     hideDistantElements: false,
     scrollProperty: 'scroll'
   });
-
+    
+    const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
 	var fullHeight = function() {
 
@@ -130,7 +133,6 @@
 
 
 	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
 	});
 
 	// scroll
@@ -181,28 +183,22 @@
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-			console.log(comma_separator_number_step);
+			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
 			
-			// Get all number elements
 			var $numbers = $('.number');
 			
-			var animationDuration = 5000;
-			// Loop through each counter
-			for (var i = 0; i < parseInt($numbers.data('number')); i++) {
-				var $this = $($numbers[i]);
-				var num = $this.data('number');
-				
-				animationDuration = Math.max(1000, animationDuration - (i * 400));
+			$numbers.each(function(i) {
+				var $this = $(this);
+				var num = parseInt($this.data('number'));
+				var animationDuration = Math.max(1000, 5000 - (i * 400));
 
-				console.log(num);
 				$this.animateNumber(
 				  {
 				    number: num,
 				    numberStep: comma_separator_number_step
 				  }, animationDuration
 				);
-			}
+			});
 				
 			}
 
@@ -286,9 +282,12 @@
 			
 			event.preventDefault();
 
-			$('html,body').animate({
-				scrollTop: $('.goto-here').offset().top
-			}, 500, 'easeInOutExpo');
+			var target = $($(this).attr('href'));
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top
+				}, 500, 'easeInOutExpo');
+			}
 			
 			return false;
 		});
@@ -300,51 +299,73 @@
 
 
 var TxtRotate = function(el, toRotate, period) {
+	console.log("Function called ! ");
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
+  this.period = parseInt(period, 10) || 1500;
   this.txt = '';
   this.tick();
   this.isDeleting = false;
 };
 
+
+
 TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+	console.log("tick function called ! ");
+	
+	var i = this.loopNum % this.toRotate.length;
+	var fullTxt = this.toRotate[i];
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
+	if (this.isDeleting) {
+		this.txt = fullTxt.substring(0, this.txt.length - 1);
+	} else {
+		this.txt = fullTxt.substring(0, this.txt.length + 1);
+		if(this.txt && this.txt.length == 1) {
+			var article = (vowels.includes(fullTxt[0])) ? "An " : "A ";
+			console.log("Rotating text in vowel? " + article + " for text: " + fullTxt);
+			// Find the first text node
+			for (let node of this.el.parentElement.childNodes) {
+				if (node.nodeType === Node.TEXT_NODE) {
+					node.nodeValue = article;
+					break; // Stop after first text node
+				}
+			}
+		}
+	}
+	if(this.el != null && this.el != undefined && this.el != "") {
+		this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+	}
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+	var that = this;
+	var delta = 300 - Math.random() * 100;
 
-  var that = this;
-  var delta = 300 - Math.random() * 100;
+	if (this.isDeleting) { delta /= 2; }
 
-  if (this.isDeleting) { delta /= 2; }
+	if (!this.isDeleting && this.txt === fullTxt) {
+		delta = this.period;
+		this.isDeleting = true;
+	} else if (this.isDeleting && this.txt === '') {
+		this.isDeleting = false;
+		this.loopNum++;
+		delta = 500;
+	}
 
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function() {
-    that.tick();
-  }, delta);
+	setTimeout(function() {
+		that.tick();
+	}, delta);
 };
+
+
+
 
 window.onload = function() {
   var elements = document.getElementsByClassName('txt-rotate');
+  
   for (var i=0; i<elements.length; i++) {
     var toRotate = elements[i].getAttribute('data-rotate');
     var period = elements[i].getAttribute('data-period');
+	
     if (toRotate) {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
